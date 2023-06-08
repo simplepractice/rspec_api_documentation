@@ -61,6 +61,7 @@ module RspecApiDocumentation
     private
 
     def filter_headers(requests)
+      requests ||= []
       requests = remap_headers(requests, :request_headers, configuration.request_headers_to_include)
       requests = remap_headers(requests, :response_headers, configuration.response_headers_to_include)
       requests
